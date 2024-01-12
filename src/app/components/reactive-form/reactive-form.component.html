@@ -1,0 +1,48 @@
+<div class="container">
+    <h2 class="heading">Agenda</h2>
+    <form [formGroup]="userForm" (ngSubmit)="submitForm()">
+
+        <div class="form-group">
+        <label for="documento">Documento</label>
+        <input type="text" class="form-control" id="documento" formControlName="documento">
+        <div *ngIf="userForm?.get('documento')?.invalid && userForm?.get('documento')?.touched" class="text-danger">
+          Documento es requerido
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="fechaVisita">Fecha Visita</label>
+        <input type="fechaVisita" class="form-control" id="fechaVisita" formControlName="fechaVisita">
+        <div *ngIf="userForm?.get('fechaVisita')?.invalid && userForm?.get('fechaVisita')?.touched" class="text-danger">
+          fecha visita es requerida
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="telefono">Telefono</label>
+        <input type="tel" class="form-control" id="telefono" formControlName="telefono">
+        <div *ngIf="userForm?.get('telefono')?.invalid && userForm?.get('telefono')?.touched" class="text-danger">
+          Telefono es requerida
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="horaVisita">HoraVisita</label>
+        <input type="number" class="form-control" id="horaVisita" formControlName="horaVisita">
+        <div *ngIf="userForm?.get('horaVisita')?.invalid && userForm?.get('horaVisita')?.touched" class="text-danger">
+          telefono es requerido
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="usuario">Usuario</label>
+        <input type="text" class="form-control" id="usuario" formControlName="usuario">
+        <div *ngIf="userForm?.get('usuario')?.invalid && userForm?.get('usuario')?.touched" class="text-danger">
+          
+        </div>
+      </div>
+  
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+  
